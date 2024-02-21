@@ -7,19 +7,18 @@ const Welcome = () => {
     const connectWallet = async () => {
         if (window.ethereum) {
           try {
-            // Request account access if needed
             await window.ethereum.request({ method: 'eth_requestAccounts' });
             
-            // Instantiate Web3 with the provider from MetaMask
+            // Instantiating Web3 with the provider from MetaMask
             const web3 = new Web3(window.ethereum);
             
-            // Use web3 to get the user's accounts
+            // Using web3 to get the user's accounts
             const accounts = await web3.eth.getAccounts();
             
             // Log the first account
             console.log('Connected with MetaMask:', accounts[0]);
             
-            // You can now use 'web3' and 'accounts' to interact with the blockchain
+            // using 'web3' and 'account' to interact with the blockchain
           } catch (error) {
             console.error(error);
           }

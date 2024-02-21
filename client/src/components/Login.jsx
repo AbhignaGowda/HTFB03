@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import Navbar from './NavBar';
 import Footer from './Footer';
-
+//Log-in Form butifuly styled using tailwind and fully responsive.
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -18,7 +18,7 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoginError(''); // Clear previous login error message
+    setLoginError(''); 
 
     try {
       const response = await axios.post('/login', { username, password });
