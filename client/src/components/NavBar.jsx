@@ -1,14 +1,14 @@
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom for routing
+import { Link } from "react-router-dom"; 
 
 import logo from "../../images/logo.png";
 import logo2 from "../../images/logo2.png";
 
 const NavBarItem = ({ title, classprops, to }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>
-    <Link to={to}>{title}</Link> {/* Use Link component for navigation */}
+    <Link to={to}>{title}</Link> 
   </li>
 );
 
