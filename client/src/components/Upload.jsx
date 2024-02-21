@@ -72,7 +72,7 @@ const UploadComponent = () => {
       <Navbar />
       <div className="flex flex-col justify-center items-center h-full text-white">
         <div className="mf:flex flex-row items-start justify-between md:p-20 py-0 px-4">
-          <div className="mt-44 ml-44 flex flex-col white-glassmorphism px-14 py-14">
+          <div className="mt-44 ml-34 flex flex-col white-glassmorphism px-14 py-14">
             <input type="file" className="text-white bg-blue-800" onChange={handleFileChange} />
             <br /> <br />
             <button className="bg-green-600 rounded-full px-2 py-1 hover:bg-green-900" onClick={handleUpload}>

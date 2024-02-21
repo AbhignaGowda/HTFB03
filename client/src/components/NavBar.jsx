@@ -2,10 +2,9 @@ import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom"; 
-
-import logo from "../../images/logo.png";
 import logo2 from "../../images/logo2.png";
 
+//This is NavBar Which is fully responsive in every device and can be modified easily
 const NavBarItem = ({ title, classprops, to }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>
     <Link to={to}>{title}</Link> 
@@ -24,7 +23,10 @@ const Navbar = () => {
       <ul className="text-white font-thin text-lg md:flex hidden list-none flex-row justify-between items-center flex-initial">
         {["Home", "About", "Upload", "Contact-Us"].map((item, index) => (
           <NavBarItem  key={item + index} title={item} to={`/${item.toLowerCase()}`} /> 
-        ))}
+          ))}
+        <li className="bg-[#6f48ca] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#6a80ce]">
+          <Link to="https://thirdweb.com/mumbai/0x1fbd03AC59E8f951F93fEc93A534E618cFeFE6Da/code">Smart-Contract</Link> {/* Example login link */}
+        </li>
         <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
           <Link to="/login">Login</Link> {/* Example login link */}
         </li>
