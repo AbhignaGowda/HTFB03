@@ -16,13 +16,13 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
-    <nav className="w-full flex md:justify-center justify-between items-center p-4 fixed">
+    <nav className="w-full flex md:justify-center justify-between items-center p-4 fixed blue-glassmorphism">
      <div className="md:flex-[0.65] flex-start items-center">
   <img src={logo2} alt="logo" className=" w-56 cursor-pointer" />
 </div>
 
       <ul className="text-white font-thin text-lg md:flex hidden list-none flex-row justify-between items-center flex-initial">
-        {["Home", "About", "Contact", "Upload"].map((item, index) => (
+        {["Home", "About", "Upload", "Contact-Us"].map((item, index) => (
           <NavBarItem  key={item + index} title={item} to={`/${item.toLowerCase()}`} /> 
         ))}
         <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
@@ -52,7 +52,7 @@ const Navbar = () => {
             <li className="text-xl w-full my-2">
               <AiOutlineClose onClick={() => setToggleMenu(false)} />
             </li>
-            {["Home", "About", "Contact", "Upload"].map((item, index) => (
+            {["Home", "About", "Upload", "Contact-Us"].map((item, index) => (
   <NavBarItem  key={item + index} title={item} to={`/${item.toLowerCase()}`} />
 ))}
 

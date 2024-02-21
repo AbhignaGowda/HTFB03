@@ -5,7 +5,9 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 const Footer = () => (
+  
   <div className="w-full flex md:justify-center justify-between items-center flex-col p-2 gradient-bg-footer bottom-0 fixed">
+    <hr />
     <div className="w-full flex sm:flex-row flex-col justify-between items-center my-2">
       <div className="flex flex-[0.5] justify-center items-center">
         {/* <img src={logo} alt="logo" className="w-32" /> */}
@@ -13,7 +15,7 @@ const Footer = () => (
     </div>
 
     <div className="flex justify-center items-center flex-col mt-2">
-      <ul className="flex justify-center space-x-2">
+      <ul className="flex justify-center space-x-10">
         <li>
           <a href="https://instagram.com">
             <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-gray-400" />

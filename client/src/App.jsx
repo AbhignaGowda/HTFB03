@@ -1,19 +1,35 @@
 import React from 'react';
+// import { Routes, Route } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
+import Upload from './components/Upload'
 import Home from './components/Home';
 import Login from './components/Login';
+import About from './components/About';
+import Contact from './components/Contact';
 
-const App=()=> (
+const App=()=> {
 
-  <div className="min-h-screen">
-  <div className="gradient-bg-welcome">
+  const handleLogin = (userData) => {
+    // Your login logic here
+    console.log('Login data:', userData);
+  };
+  return(
     
-    <Routes>
-      <Route path="/home" element={<Home/>}/> 
-       <Route path="/login" element={<Login/>}/> 
-      {/* <Route path="/hij" element={<Hij/>}/> 
-      <Route path="/lmn" element={<Lmn/>}/>   */}
+    <div className="min-h-screen">
+  <div className="gradient-bg-welcome">
+  <Routes>
+  
+        <Route path="/home" element={<Home />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login onLogin={handleLogin}/>} />
+      
+      
     </Routes>
+    
+    
+ 
   </div>
   
 
@@ -21,6 +37,7 @@ const App=()=> (
   
 </div>
   )
+};
 
 
 export default App
